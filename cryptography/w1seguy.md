@@ -18,8 +18,11 @@ to connect to the script where we are prompted with an XOR text for flag 1.
 
 The idea behind finding the answer is that we know part of the flag because we know the format; we know the flag must contain THM{}, and XOR can undo itself because we know some of the characters of the flag and the
 length of the key. This works because:
+
 ciphertext = plaintext XOR key
+
 So knowing part of the plaintext (the flag) lets us rearrange it:
+
 key = plaintext XOR ciphertext
 
 So we take the first 4 bytes of the XOR-encoded text and XOR them with the characters from the plaintext that we know, THM{. This gets us the first 4 characters of the encryption key. 
