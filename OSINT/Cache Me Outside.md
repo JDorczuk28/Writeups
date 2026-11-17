@@ -7,3 +7,12 @@ There's a GitHub link provided that we can continue to investigate. There's a si
 which often contains more details than are visible normally, such as metadata and line-by-line changes. This extension shows us the answer to the second question!
 <img width="1217" height="570" alt="image" src="https://github.com/user-attachments/assets/62cb9c8f-abe4-4523-831d-2673e480c753" />
 
+Normally, I wouldn't do this for TryHackMe challenges, but the directions suggest that I get the phone number for question 3 by emailing the user: "The interaction and response are part of the controlled challenge setup". By emailing the user, I get an auto-reply containing the phone number.
+
+Moving on to the next question, it asks what city he is located in. By searching up his name, we come across his Threads account where he has a picture posted with a store name in it. A quick google search confirms the location and the answer to this question.
+<img width="710" height="346" alt="image" src="https://github.com/user-attachments/assets/627d3f28-2bc2-4b7d-95fc-051b8ec31da7" />
+
+The last question asks which tram he got off. Going to maps and finding the location, a search for French supermarkets reveals one right down the road, and right next to it, a tram station, giving us the final answer! 
+<img width="1232" height="757" alt="image" src="https://github.com/user-attachments/assets/f4333c3a-7564-420c-9829-46538fa4ed3a" />
+
+
