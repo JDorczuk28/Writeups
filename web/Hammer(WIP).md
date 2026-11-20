@@ -35,6 +35,32 @@ Running it should verify the session for us, so no matter what code we put it in
 
 
 Doing this allows us to change the password, and then we can simply go back and log in with the email we found earlier and the new password that we just set.
+<img width="1661" height="592" alt="image" src="https://github.com/user-attachments/assets/dc30e673-5b53-4e5a-b42d-b9a5a44f35cc" />
+
+After running a few commands, I learn I dont have very much power, viewing the page source, I find a JWTtoken that I can take a look at and maybe manipulate.
+<img width="1883" height="458" alt="image" src="https://github.com/user-attachments/assets/37a82ff1-fde2-4906-9a7f-233d688afc54" />
+
+Decoding the token, it shows info about the user and most notably, our role and the kid variable in the header.
+<img width="1637" height="737" alt="image" src="https://github.com/user-attachments/assets/7fde6663-1fdf-4517-babc-199eea15f778" />
+
+If we run ls in the command bar we get when logging in, we can see another .key file, theres a chance that this can go in the kid variable and allow us to change our role to admin.
+<img width="1090" height="435" alt="image" src="https://github.com/user-attachments/assets/bc2a83c1-d277-4af0-891e-3528f41d7738" />
+We also need to contents of this file to be manipulate the JWT token correctly, using curl gets me them even though cat doesnt work:
+<img width="477" height="112" alt="image" src="https://github.com/user-attachments/assets/cf6eaaa4-3826-4bc1-aaea-a409f54f403b" />
+
+
+Adding this information gets me my updated key. 
+<img width="1495" height="812" alt="image" src="https://github.com/user-attachments/assets/cdaecb14-a7b8-4732-a540-70f948c3696c" />
+
+
+To use this key, we can fire up Burp Suite again, this time using the Repeater tab. Insert my altered JWT token into the Authorization header and put in the command I want; the flag path is specified in the questions so we dont need to search for it, and that gives us the final flag of this room.
+<img width="1591" height="640" alt="Screenshot 2026-11-19 172542" src="https://github.com/user-attachments/assets/d00f559b-b484-4b5f-921a-16afb9715a91" />
+
+
+
+
+
+
 
 
 
